@@ -26,7 +26,7 @@ where `image` is one of `spark` or `spring-boot`
 ./build image [port]
 ```
 
-where `image` is one of `spark` or `spring-boot`. port will default to `8080`
+where `image` is one of `spark` or `spring-boot`. port will default to `8080` (spark uses `4567`)
 
 ##
 
