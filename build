@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+image=${1}
+tag=${2:-${image}}
+
+docker build --tag ${tag} apps/${image}

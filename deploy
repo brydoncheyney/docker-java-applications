@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+image=${1}
+port=${2:-8080}
+
+docker run -it -p${port}:${port} ${image}
