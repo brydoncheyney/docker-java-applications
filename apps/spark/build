@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-mvn dependency:resolve
-mvn verify
-mvn package
