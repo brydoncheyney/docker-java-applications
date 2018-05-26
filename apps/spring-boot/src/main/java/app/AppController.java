@@ -15,7 +15,7 @@ public class AppController {
 
   @RequestMapping("/")
   public String index() {
-    return String.format("Application [%s|%s] FTW!", foo, secret);
+    return String.format("Spring Boot! [%s|%s]", foo, secret);
   }
 
 }

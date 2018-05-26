@@ -12,24 +12,20 @@ Playing around with packaging and configuring JVM applications in Docker.
 
 The containers use the [OpenJDK](https://hub.docker.com/\_/openjdk/) image that is build on the [Alpine](https://hub.docker.com/\_/alpine/) image. _Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general._
 
-## Building
-
-```console
-./build image
-```
-
-where `image` is one of `spark` or `spring-boot`
-
 ## Running
 
+To build the application, package in a docker container and run -
+
 ```console
-./build image [port]
+./deploy image [port]
 ```
 
-where `image` is one of `spark` or `spring-boot`. port will default to `8080` (spark uses `4567`)
+where `image` is one of `spark` or `spring-boot`.
 
-##
+## HTTP
 
 ```console
 curl localhost:[port]
 ```
+
+Port is `8080` for `spring-boot` and `4567` for `spark`

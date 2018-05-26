@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
 image=${1}
-port=${2:-8080}
+tag=${2:-${image}}
 
-docker run -it -p${port}:${port} ${image}
+[ -d apps/${image} ] || {
+  echo "${image}: Service does not exist"
+  exit 1;
+}
+
+pushd apps/${image}
+make clean build docker run
+popd
