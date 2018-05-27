@@ -17,10 +17,8 @@ The containers use the [OpenJDK](https://hub.docker.com/\_/openjdk/) image that 
 To build the application, package in a docker container and run -
 
 ```console
-./deploy image
+./deploy (spark|springboot)
 ```
-
-where `image` is one of `spark` or `spring-boot`.
 
 ## HTTP
 
