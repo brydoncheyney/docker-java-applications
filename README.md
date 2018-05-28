@@ -8,6 +8,13 @@ Playing around with packaging and configuring JVM applications in Docker.
 
 - [Spark](http://sparkjava.com/) _a micro framework for creating web applications in Kotlin and Java 8 with minimal effort_
 
+### Requirements
+
+- [x] external configuration
+- [ ] log shipping (syslog?)
+- [ ] monitoring
+- [ ] metrics
+
 ## Docker Base Image
 
 The containers use the [OpenJDK](https://hub.docker.com/\_/openjdk/) image that is build on the [Alpine](https://hub.docker.com/\_/alpine/) image. _Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general._
