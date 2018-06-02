@@ -4,10 +4,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Configuration {
+
+  private static final String PROPERTIES = "/opt/spark-service/spark-service.properties";
+  private static Logger logger = LoggerFactory.getLogger(Configuration.class);
 
   private String foo;
   private String secret;
@@ -17,6 +20,7 @@ public class Configuration {
   }
 
   public void setFoo(String foo) {
+    logger.info("Setting foo: {}", foo);
     this.foo = foo;
   }
 
@@ -25,11 +29,9 @@ public class Configuration {
   }
 
   public void setSecret(String secret) {
+    logger.info("Setting secret");
     this.secret = secret;
   }
-
-  private static final String PROPERTIES = "/opt/spark-service/spark-service.properties";
-  private static Logger logger = LogManager.getLogger(Configuration.class);
 
   private static void loadFromProperties(Configuration config) {
     Properties properties = new Properties();
