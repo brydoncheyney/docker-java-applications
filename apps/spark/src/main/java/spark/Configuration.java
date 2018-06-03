@@ -16,6 +16,7 @@ public class Configuration {
   private String secret;
 
   public String getFoo() {
+    logger.info("GET foo");
     return foo;
   }
 
@@ -25,6 +26,7 @@ public class Configuration {
   }
 
   public String getSecret() {
+    logger.info("GET secret");
     return secret;
   }
 
