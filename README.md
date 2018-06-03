@@ -39,8 +39,19 @@ Port is `8080` for `spring-boot` and `4567` for `spark`
 
 A simple logging service ships container logs to a configured [Elastic stack](https://www.elastic.co/) using [filebeat](https://www.elastic.co/products/beats/filebeat). Provisioning an stack is as easy as provisioning the example [Elastic stack-docker](https://github.com/elastic/stack-docker).
 
+> Note that the logging container is configured to join the `stackdocker_stack`
+> network to allow log to be shipped to the Elastic stack
+
 To build and run the logging service -
 
 ```console
 ./deploy logging
+```
+
+## Docker Compose
+
+A simple `docker-compose.yml` is available to provision the full docker environment -
+
+```console
+docker-compose up
 ```

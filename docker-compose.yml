@@ -1,0 +1,27 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: 'stackdocker_stack'
+
+services:
+  spark:
+    image: spark
+    container_name: spark
+    ports:
+    - '4567:4567'
+    domainname: internal
+  spring-boot:
+    image: spring-boot
+    container_name: spring-boot
+    ports:
+    - '8080:8080'
+    domainname: internal
+  logger:
+    image: docker-logging
+    container_name: logging
+    domainname: internal
+    volumes:
+    - /var/lib/docker/containers:/var/lib/docker/containers
+    - /var/run/docker.sock:/var/run/docker.sock
