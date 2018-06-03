@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -x
+
+container=$1
+id=$(docker ps --no-trunc | awk -v pattern="${container}" '$0 ~ pattern {print $1}')
+
+sudo tail -f /var/lib/docker/containers/${id}/${id}-json.log
