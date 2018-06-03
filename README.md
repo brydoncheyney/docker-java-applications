@@ -34,3 +34,13 @@ curl localhost:[port]
 ```
 
 Port is `8080` for `spring-boot` and `4567` for `spark`
+
+## Logging
+
+A simple logging service ships container logs to a configured [Elastic stack](https://www.elastic.co/) using [filebeat](https://www.elastic.co/products/beats/filebeat). Provisioning an stack is as easy as provisioning the example [Elastic stack-docker](https://github.com/elastic/stack-docker).
+
+To build and run the logging service -
+
+```console
+./deploy logging
+```
