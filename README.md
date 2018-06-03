@@ -11,7 +11,7 @@ Playing around with packaging and configuring JVM applications in Docker.
 ### Requirements
 
 - [x] external configuration
-- [ ] log shipping (syslog?)
+- [x] log shipping (syslog?)
 - [ ] monitoring
 - [ ] metrics
 
