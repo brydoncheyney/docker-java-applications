@@ -24,7 +24,13 @@ The containers use the [OpenJDK](https://hub.docker.com/\_/openjdk/) image that 
 A simple `docker-compose.yml` is available to provision the full docker environment -
 
 ```console
-docker-compose up
+docker-compose up -d
+```
+
+To monitor the service logs -
+
+```console
+docker-compose logs -f
 ```
 
 ## Building
@@ -33,6 +39,12 @@ To build an application and package as a docker container -
 
 ```console
 ./build (spark|springboot)
+```
+
+To redeploy a container after a build -
+
+```console
+docker-compose up -d --force-recreate --no-deps spring-boot
 ```
 
 ## HTTP
