@@ -1,3 +1,5 @@
+all: clean build docker
+
 clean:
 
 build:

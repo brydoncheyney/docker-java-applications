@@ -21,10 +21,18 @@ The containers use the [OpenJDK](https://hub.docker.com/\_/openjdk/) image that 
 
 ## Running
 
-To build the application, package in a docker container and run -
+A simple `docker-compose.yml` is available to provision the full docker environment -
 
 ```console
-./deploy (spark|springboot)
+docker-compose up
+```
+
+## Building
+
+To build an application and package as a docker container -
+
+```console
+./build (spark|springboot)
 ```
 
 ## HTTP
@@ -45,13 +53,5 @@ A simple logging service ships container logs to a configured [Elastic stack](ht
 To build and run the logging service -
 
 ```console
-./deploy logging
-```
-
-## Docker Compose
-
-A simple `docker-compose.yml` is available to provision the full docker environment -
-
-```console
-docker-compose up
+./build logging
 ```

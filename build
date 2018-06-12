@@ -9,5 +9,5 @@ tag=${2:-${image}}
 }
 
 pushd apps/${image}
-make clean build docker run
+make clean build docker
 popd
