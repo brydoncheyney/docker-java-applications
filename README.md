@@ -57,7 +57,7 @@ Port is `8080` for `spring-boot` and `4567` for `spark`
 
 ## Logging
 
-A simple logging service ships container logs to a configured [Elastic stack](https://www.elastic.co/) using [filebeat](https://www.elastic.co/products/beats/filebeat). Provisioning an stack is as easy as provisioning the example [Elastic stack-docker](https://github.com/elastic/stack-docker).
+A simple logging service ships container logs to a configured [Elastic stack](https://www.elastic.co/) using [filebeat](https://www.elastic.co/products/beats/filebeat). Provisioning an stack is as easy as provisioning the example [Elastic stack-docker](https://github.com/brydoncheyney/stack-docker).
 
 > Note that the logging container is configured to join the `stackdocker_stack`
 > network to allow log to be shipped to the Elastic stack
@@ -66,4 +66,14 @@ To build and run the logging service -
 
 ```console
 ./build logging
+```
+
+### View Logs
+
+View the [Elastic stack-docker](https://github.com/brydoncheyney/stack-docker) documentation for how to access Kibana.
+
+Filter the `filebeat-*` index with queries on `docker.container.name`, i.e.
+
+```console
+docker.container.name: spring-boot
 ```
